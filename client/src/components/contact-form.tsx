@@ -126,70 +126,111 @@ export default function ContactForm() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <Card className="shadow-lg">
-              <CardContent className="p-8">
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  <div>
-                    <Label htmlFor="name" className="text-sm font-medium text-gray-700 mb-2 block">
-                      Nome completo
-                    </Label>
-                    <Input
-                      id="name"
-                      type="text"
-                      placeholder="Seu nome completo"
-                      {...form.register("name")}
-                      className="w-full"
-                    />
-                    {form.formState.errors.name && (
-                      <p className="text-red-500 text-sm mt-1">{form.formState.errors.name.message}</p>
-                    )}
+            <Card className="shadow-2xl border-0 overflow-hidden">
+              <CardContent className="p-0">
+                {/* Form Header */}
+                <div className="bg-gradient-to-r from-whatsapp to-blue-light p-8 text-white text-center">
+                  <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="h-8 w-8" />
                   </div>
-                  
-                  <div>
-                    <Label htmlFor="email" className="text-sm font-medium text-gray-700 mb-2 block">
-                      E-mail
-                    </Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="seu@email.com"
-                      {...form.register("email")}
-                      className="w-full"
-                    />
-                    {form.formState.errors.email && (
-                      <p className="text-red-500 text-sm mt-1">{form.formState.errors.email.message}</p>
-                    )}
-                  </div>
-                  
-                  <div>
-                    <Label htmlFor="whatsapp" className="text-sm font-medium text-gray-700 mb-2 block">
-                      WhatsApp (com DDD)
-                    </Label>
-                    <Input
-                      id="whatsapp"
-                      type="tel"
-                      placeholder="(11) 99999-9999"
-                      {...form.register("whatsapp")}
-                      onChange={handleWhatsAppChange}
-                      className="w-full"
-                    />
-                    {form.formState.errors.whatsapp && (
-                      <p className="text-red-500 text-sm mt-1">{form.formState.errors.whatsapp.message}</p>
-                    )}
-                  </div>
-                  
-                  <Button
-                    type="submit"
-                    disabled={mutation.isPending}
-                    className="w-full bg-whatsapp text-white hover:bg-whatsapp-dark transform hover:scale-105 transition-all py-4 text-lg font-bold"
-                  >
-                    {mutation.isPending ? "Criando conta..." : "Criar Conta"}
-                  </Button>
-                  
-                  <p className="text-center text-sm text-gray-500">
-                    Ao criar sua conta, você concorda com nossos termos de uso. Garantia de 7 dias para devolução por qualquer motivo.
-                  </p>
-                </form>
+                  <h3 className="text-2xl font-bold mb-2">Acesso Liberado em 24h</h3>
+                  <p className="text-white/90">Preencha os dados e garanta sua vaga</p>
+                </div>
+                
+                {/* Form Content */}
+                <div className="p-8 bg-gradient-to-br from-gray-50 to-white">
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <div>
+                      <Label htmlFor="name" className="text-sm font-semibold text-gray-700 mb-3 block flex items-center">
+                        <span className="bg-whatsapp text-white w-6 h-6 rounded-full text-xs flex items-center justify-center mr-2">1</span>
+                        Nome completo
+                      </Label>
+                      <Input
+                        id="name"
+                        type="text"
+                        placeholder="Digite seu nome completo"
+                        {...form.register("name")}
+                        className="w-full h-12 border-2 border-gray-200 focus:border-whatsapp rounded-xl px-4 transition-all"
+                      />
+                      {form.formState.errors.name && (
+                        <p className="text-red-500 text-sm mt-2 flex items-center">
+                          <span className="mr-1">⚠️</span>
+                          {form.formState.errors.name.message}
+                        </p>
+                      )}
+                    </div>
+                    
+                    <div>
+                      <Label htmlFor="email" className="text-sm font-semibold text-gray-700 mb-3 block flex items-center">
+                        <span className="bg-blue-light text-white w-6 h-6 rounded-full text-xs flex items-center justify-center mr-2">2</span>
+                        E-mail
+                      </Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="seu@email.com"
+                        {...form.register("email")}
+                        className="w-full h-12 border-2 border-gray-200 focus:border-blue-light rounded-xl px-4 transition-all"
+                      />
+                      {form.formState.errors.email && (
+                        <p className="text-red-500 text-sm mt-2 flex items-center">
+                          <span className="mr-1">⚠️</span>
+                          {form.formState.errors.email.message}
+                        </p>
+                      )}
+                    </div>
+                    
+                    <div>
+                      <Label htmlFor="whatsapp" className="text-sm font-semibold text-gray-700 mb-3 block flex items-center">
+                        <span className="bg-green-success text-white w-6 h-6 rounded-full text-xs flex items-center justify-center mr-2">3</span>
+                        WhatsApp (com DDD)
+                      </Label>
+                      <Input
+                        id="whatsapp"
+                        type="tel"
+                        placeholder="(11) 99999-9999"
+                        {...form.register("whatsapp")}
+                        onChange={handleWhatsAppChange}
+                        className="w-full h-12 border-2 border-gray-200 focus:border-green-success rounded-xl px-4 transition-all"
+                      />
+                      {form.formState.errors.whatsapp && (
+                        <p className="text-red-500 text-sm mt-2 flex items-center">
+                          <span className="mr-1">⚠️</span>
+                          {form.formState.errors.whatsapp.message}
+                        </p>
+                      )}
+                    </div>
+                    
+                    <div className="pt-4">
+                      <Button
+                        type="submit"
+                        disabled={mutation.isPending}
+                        className="w-full bg-gradient-to-r from-whatsapp to-green-success text-white hover:from-whatsapp-dark hover:to-green-success transform hover:scale-105 transition-all py-6 text-xl font-black rounded-xl shadow-lg"
+                      >
+                        {mutation.isPending ? (
+                          <div className="flex items-center justify-center">
+                            <div className="animate-spin w-5 h-5 border-2 border-white border-t-transparent rounded-full mr-3"></div>
+                            Criando conta...
+                          </div>
+                        ) : (
+                          <div className="flex items-center justify-center">
+                            <Shield className="mr-3 h-6 w-6" />
+                            CRIAR CONTA AGORA
+                          </div>
+                        )}
+                      </Button>
+                    </div>
+                    
+                    <div className="bg-yellow-accent/10 border border-yellow-accent/30 rounded-xl p-4 text-center">
+                      <p className="text-sm text-gray-700 font-medium">
+                        🛡️ <strong>Garantia Total:</strong> 7 dias para devolução por qualquer motivo
+                      </p>
+                      <p className="text-xs text-gray-600 mt-1">
+                        ✅ Sem risco • ⚡ Acesso imediato • 🎯 Resultados garantidos
+                      </p>
+                    </div>
+                  </form>
+                </div>
               </CardContent>
             </Card>
           </motion.div>

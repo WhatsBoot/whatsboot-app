@@ -19,14 +19,14 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="pt-24 pb-16 bg-gradient-to-br from-blue-dark via-blue-light to-whatsapp overflow-hidden">
+    <section className="pt-24 pb-16 bg-gradient-to-br from-blue-dark via-purple-accent to-whatsapp overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Exclusive System Badge */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 pulse-glow"
+          className="inline-flex items-center bg-orange-accent text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 pulse-glow"
         >
           🚨 SISTEMA EXCLUSIVO
         </motion.div>
@@ -82,12 +82,13 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1 }}
-          className="grid md:grid-cols-4 gap-4 mb-8 max-w-4xl mx-auto"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-5xl mx-auto"
         >
           {stats.map((stat, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm p-4 rounded-lg text-white">
-              <div className="text-2xl font-bold text-yellow-accent">{stat.value}</div>
-              <div className="text-sm">{stat.label}</div>
+            <div key={index} className="bg-white/15 backdrop-blur-md p-6 rounded-xl text-white border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <stat.icon className="text-yellow-accent h-6 w-6 mb-2 mx-auto" />
+              <div className="text-3xl font-black text-yellow-accent mb-1">{stat.value}</div>
+              <div className="text-sm font-medium opacity-90">{stat.label}</div>
             </div>
           ))}
         </motion.div>
@@ -102,16 +103,16 @@ export default function HeroSection() {
           <Button
             onClick={() => scrollToSection("precos")}
             size="lg"
-            className="bg-whatsapp text-white px-8 py-4 text-lg font-bold hover:bg-whatsapp-dark transform hover:scale-105 transition-all shadow-lg"
+            className="bg-yellow-accent text-gray-900 px-10 py-5 text-xl font-black hover:bg-yellow-accent/90 transform hover:scale-105 transition-all shadow-2xl rounded-xl"
           >
-            <Shield className="mr-2 h-5 w-5" />
+            <Shield className="mr-3 h-6 w-6" />
             COMPRE AGORA COM GARANTIA
           </Button>
           <Button
             onClick={() => scrollToSection("contato")}
             variant="outline"
             size="lg"
-            className="bg-white text-blue-dark px-8 py-4 text-lg font-bold hover:bg-gray-50 transform hover:scale-105 transition-all shadow-lg border-white"
+            className="bg-white/10 backdrop-blur-md text-white border-white/30 px-10 py-5 text-xl font-black hover:bg-white/20 transform hover:scale-105 transition-all shadow-xl rounded-xl"
           >
             Falar com Consultor
           </Button>

@@ -68,7 +68,7 @@ export default function PricingSection() {
   return (
     <>
       {/* Exclusive System Results */}
-      <section className="py-16 bg-gradient-to-br from-whatsapp to-green-600">
+      <section className="py-16 bg-gradient-to-br from-whatsapp via-green-success to-blue-light">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -155,7 +155,7 @@ export default function PricingSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-red-600 rounded-xl p-8 text-center"
+            className="bg-orange-accent rounded-xl p-8 text-center"
           >
             <h3 className="text-2xl font-bold text-white mb-4">⚠️ ATENÇÃO: Vagas Limitadas</h3>
             <p className="text-white/90 mb-6">
@@ -176,7 +176,7 @@ export default function PricingSection() {
             <Button
               onClick={() => scrollToSection("precos")}
               size="lg"
-              className="bg-white text-red-600 hover:bg-gray-100 font-bold"
+              className="bg-white text-orange-accent hover:bg-gray-100 font-bold"
             >
               CRIAR CONTA AGORA
             </Button>

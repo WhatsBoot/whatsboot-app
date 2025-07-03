@@ -109,38 +109,64 @@ export default function DashboardSection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <Card className="shadow-2xl">
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between mb-6">
-                  <h4 className="text-lg font-bold text-gray-900">Dashboard Principal</h4>
-                  <Badge variant="outline">Visão geral completa</Badge>
+            <Card className="shadow-2xl border-0 overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800">
+              <CardContent className="p-0">
+                {/* Header */}
+                <div className="bg-gradient-to-r from-whatsapp to-blue-light p-6 text-white">
+                  <div className="flex items-center justify-between mb-4">
+                    <h4 className="text-xl font-bold">Dashboard Principal</h4>
+                    <Badge className="bg-white/20 text-white border-0">Visão geral completa</Badge>
+                  </div>
+                  
+                  {/* Live Stats */}
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="text-center">
+                      <div className="text-3xl font-black text-yellow-accent">25K+</div>
+                      <div className="text-sm opacity-90">Mensagens Hoje</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-black text-yellow-accent">95%</div>
+                      <div className="text-sm opacity-90">Taxa Entrega</div>
+                    </div>
+                  </div>
                 </div>
                 
-                {/* Metrics Cards */}
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="bg-whatsapp/10 p-4 rounded-lg text-center">
-                    <div className="text-2xl font-bold text-whatsapp">25K+</div>
-                    <div className="text-sm text-gray-600">Mensagens</div>
-                  </div>
-                  <div className="bg-blue-light/10 p-4 rounded-lg text-center">
-                    <div className="text-2xl font-bold text-blue-light">95%</div>
-                    <div className="text-sm text-gray-600">Entrega</div>
-                  </div>
-                </div>
-                
-                {/* Feature Buttons */}
-                <div className="space-y-3">
-                  <div className="flex items-center p-3 bg-gray-50 rounded-lg">
-                    <Send className="text-whatsapp h-5 w-5 mr-3" />
-                    <span className="text-gray-900 font-medium">Campanhas Ativas</span>
-                  </div>
-                  <div className="flex items-center p-3 bg-gray-50 rounded-lg">
-                    <Users className="text-blue-light h-5 w-5 mr-3" />
-                    <span className="text-gray-900 font-medium">Gestão de Contatos</span>
-                  </div>
-                  <div className="flex items-center p-3 bg-gray-50 rounded-lg">
-                    <Bot className="text-purple-500 h-5 w-5 mr-3" />
-                    <span className="text-gray-900 font-medium">Chatbot Configurado</span>
+                {/* Dashboard Content */}
+                <div className="p-6 space-y-4">
+                  {/* Active Features */}
+                  <div className="space-y-3">
+                    <div className="flex items-center p-4 bg-gradient-to-r from-whatsapp/10 to-green-success/10 rounded-xl border border-whatsapp/20">
+                      <div className="bg-whatsapp p-2 rounded-lg mr-4">
+                        <Send className="text-white h-5 w-5" />
+                      </div>
+                      <div className="flex-1">
+                        <span className="text-white font-semibold">Campanhas Ativas</span>
+                        <div className="text-green-400 text-sm">3 executando agora</div>
+                      </div>
+                      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    </div>
+                    
+                    <div className="flex items-center p-4 bg-gradient-to-r from-blue-light/10 to-purple-accent/10 rounded-xl border border-blue-light/20">
+                      <div className="bg-blue-light p-2 rounded-lg mr-4">
+                        <Users className="text-white h-5 w-5" />
+                      </div>
+                      <div className="flex-1">
+                        <span className="text-white font-semibold">Gestão de Contatos</span>
+                        <div className="text-blue-300 text-sm">12.5K contatos ativos</div>
+                      </div>
+                      <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                    </div>
+                    
+                    <div className="flex items-center p-4 bg-gradient-to-r from-purple-accent/10 to-whatsapp/10 rounded-xl border border-purple-accent/20">
+                      <div className="bg-purple-accent p-2 rounded-lg mr-4">
+                        <Bot className="text-white h-5 w-5" />
+                      </div>
+                      <div className="flex-1">
+                        <span className="text-white font-semibold">Chatbot Configurado</span>
+                        <div className="text-purple-300 text-sm">Respondendo 24/7</div>
+                      </div>
+                      <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+                    </div>
                   </div>
                 </div>
               </CardContent>

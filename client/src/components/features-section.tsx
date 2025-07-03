@@ -91,10 +91,10 @@ export default function FeaturesSection() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: TrendingUp, title: "Sistema que fatura R$ 2.1M/dia", color: "text-whatsapp" },
-              { icon: Bot, title: "Automação 100% inteligente", color: "text-blue-light" },
-              { icon: Clock, title: "Acesso liberado em 24 horas", color: "text-green-500" },
-              { icon: Settings, title: "Suporte exclusivo VIP", color: "text-purple-500" }
+              { icon: TrendingUp, title: "Sistema que fatura R$ 2.1M/dia", color: "whatsapp", bg: "bg-gradient-to-br from-whatsapp to-green-success" },
+              { icon: Bot, title: "Automação 100% inteligente", color: "blue-light", bg: "bg-gradient-to-br from-blue-light to-purple-accent" },
+              { icon: Clock, title: "Acesso liberado em 24 horas", color: "green-success", bg: "bg-gradient-to-br from-green-success to-whatsapp" },
+              { icon: Settings, title: "Suporte exclusivo VIP", color: "purple-accent", bg: "bg-gradient-to-br from-purple-accent to-blue-light" }
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -103,12 +103,14 @@ export default function FeaturesSection() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="hover:shadow-xl transition-shadow h-full">
-                  <CardContent className="p-6 text-center">
-                    <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${item.color.replace('text-', 'bg-')}/10`}>
-                      <item.icon className={`${item.color} h-8 w-8`} />
+                <Card className="hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full overflow-hidden border-0">
+                  <CardContent className="p-0">
+                    <div className={`${item.bg} h-20 flex items-center justify-center`}>
+                      <item.icon className="text-white h-10 w-10" />
                     </div>
-                    <h3 className="font-bold text-gray-900">{item.title}</h3>
+                    <div className="p-6 text-center">
+                      <h3 className="font-bold text-gray-900 text-lg leading-tight">{item.title}</h3>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -132,12 +134,12 @@ export default function FeaturesSection() {
             </h2>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {[
-              "Perder clientes por demora na resposta",
-              "Trabalho manual repetitivo e cansativo",
-              "Leads quentes que viram leads frios",
-              "Concorrência que vende mais que você"
+              { text: "Perder clientes por demora na resposta", impact: "Até 40% dos leads perdidos" },
+              { text: "Trabalho manual repetitivo e cansativo", impact: "8h/dia desperdiçadas" },
+              { text: "Leads quentes que viram leads frios", impact: "67% de conversão perdida" },
+              { text: "Concorrência que vende mais que você", impact: "Mercado sendo dominado" }
             ].map((problem, index) => (
               <motion.div
                 key={index}
@@ -145,12 +147,21 @@ export default function FeaturesSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="flex items-center space-x-4 p-6 bg-red-50 rounded-xl"
+                className="relative overflow-hidden"
               >
-                <div className="bg-red-500 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white text-xl">✕</span>
-                </div>
-                <h3 className="font-bold text-gray-900">{problem}</h3>
+                <Card className="border-l-4 border-l-red-500 hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-red-500 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-white text-xl font-bold">✕</span>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-bold text-gray-900 text-lg mb-2">{problem.text}</h3>
+                        <p className="text-red-600 font-semibold text-sm">{problem.impact}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               </motion.div>
             ))}
           </div>
@@ -187,22 +198,31 @@ export default function FeaturesSection() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="hover:shadow-lg transition-shadow h-full">
+                <Card className="hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 h-full overflow-hidden border-0">
                   <CardContent className="p-0">
-                    <img 
-                      src={feature.image} 
-                      alt={feature.title}
-                      className="w-full h-48 object-cover rounded-t-lg"
-                    />
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    <div className="relative">
+                      <img 
+                        src={feature.image} 
+                        alt={feature.title}
+                        className="w-full h-48 object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                      <div className="absolute top-4 right-4">
+                        <div className="bg-whatsapp text-white p-2 rounded-full">
+                          <feature.icon className="h-5 w-5" />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
+                      <h3 className="text-xl font-bold text-gray-900 mb-4 leading-tight">
                         {feature.title}
                       </h3>
-                      <p className="text-gray-600 mb-4">
+                      <p className="text-gray-600 mb-4 text-sm leading-relaxed">
                         {feature.description}
                       </p>
-                      <button className="text-whatsapp font-semibold hover:text-whatsapp-dark">
-                        Saiba mais →
+                      <button className="inline-flex items-center text-whatsapp font-semibold hover:text-whatsapp-dark transition-colors group">
+                        Saiba mais 
+                        <span className="ml-1 transform group-hover:translate-x-1 transition-transform">→</span>
                       </button>
                     </div>
                   </CardContent>
