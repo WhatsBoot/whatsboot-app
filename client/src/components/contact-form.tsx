@@ -129,7 +129,7 @@ export default function ContactForm() {
             <Card className="shadow-2xl border-0 overflow-hidden">
               <CardContent className="p-0">
                 {/* Form Header */}
-                <div className="bg-gradient-to-r from-whatsapp to-blue-light p-8 text-white text-center">
+                <div className="bg-gradient-to-r from-cyan-500 to-purple-600 p-8 text-white text-center">
                   <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Shield className="h-8 w-8" />
                   </div>
@@ -205,7 +205,7 @@ export default function ContactForm() {
                       <Button
                         type="submit"
                         disabled={mutation.isPending}
-                        className="w-full bg-gradient-to-r from-whatsapp to-green-success text-white hover:from-whatsapp-dark hover:to-green-success transform hover:scale-105 transition-all py-6 text-xl font-black rounded-xl shadow-lg"
+                        className="w-full bg-gradient-to-r from-emerald-500 to-cyan-500 text-white hover:from-emerald-600 hover:to-cyan-600 transform hover:scale-105 transition-all py-6 text-xl font-black rounded-xl shadow-lg"
                       >
                         {mutation.isPending ? (
                           <div className="flex items-center justify-center">

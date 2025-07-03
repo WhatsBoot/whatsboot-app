@@ -121,11 +121,11 @@ export default function DashboardSection() {
                   {/* Live Stats */}
                   <div className="grid grid-cols-2 gap-4">
                     <div className="text-center">
-                      <div className="text-3xl font-black text-yellow-accent">25K+</div>
+                      <div className="text-3xl font-black text-cyan-400">25K+</div>
                       <div className="text-sm opacity-90">Mensagens Hoje</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-black text-yellow-accent">95%</div>
+                      <div className="text-3xl font-black text-pink-400">95%</div>
                       <div className="text-sm opacity-90">Taxa Entrega</div>
                     </div>
                   </div>

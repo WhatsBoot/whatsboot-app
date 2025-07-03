@@ -63,7 +63,7 @@ export default function HeroSection() {
           className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight"
         >
           A Máquina de Vendas no WhatsApp<br />
-          <span className="text-yellow-accent">Que Você Estava Esperando!</span>
+          <span className="text-cyan-400 neon-text">Que Você Estava Esperando!</span>
         </motion.h1>
 
         {/* Subheadline */}
@@ -74,7 +74,7 @@ export default function HeroSection() {
           className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed"
         >
           O sistema secreto que grandes empresas usam para dominar vendas no WhatsApp. 
-          <strong className="text-yellow-accent"> Converta 387% mais leads</strong> e elimine 94% do trabalho manual.
+          <strong className="text-cyan-400 neon-text"> Converta 387% mais leads</strong> e elimine 94% do trabalho manual.
         </motion.p>
 
         {/* Stats Grid */}
@@ -85,9 +85,9 @@ export default function HeroSection() {
           className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-5xl mx-auto"
         >
           {stats.map((stat, index) => (
-            <div key={index} className="bg-white/15 backdrop-blur-md p-6 rounded-xl text-white border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <stat.icon className="text-yellow-accent h-6 w-6 mb-2 mx-auto" />
-              <div className="text-3xl font-black text-yellow-accent mb-1">{stat.value}</div>
+            <div key={index} className="bg-white/15 backdrop-blur-md p-6 rounded-xl text-white border border-white/20 hover:bg-white/20 transition-all duration-300 float-animation">
+              <stat.icon className="text-cyan-400 h-6 w-6 mb-2 mx-auto" />
+              <div className="text-3xl font-black text-cyan-400 mb-1">{stat.value}</div>
               <div className="text-sm font-medium opacity-90">{stat.label}</div>
             </div>
           ))}
@@ -103,7 +103,7 @@ export default function HeroSection() {
           <Button
             onClick={() => scrollToSection("precos")}
             size="lg"
-            className="bg-yellow-accent text-gray-900 px-10 py-5 text-xl font-black hover:bg-yellow-accent/90 transform hover:scale-105 transition-all shadow-2xl rounded-xl"
+            className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-10 py-5 text-xl font-black hover:from-cyan-500 hover:to-purple-600 transform hover:scale-105 transition-all shadow-2xl rounded-xl"
           >
             <Shield className="mr-3 h-6 w-6" />
             COMPRE AGORA COM GARANTIA

@@ -189,7 +189,7 @@ export default function PricingSection() {
       </section>
 
       {/* Pricing Plans */}
-      <section id="precos" className="py-16 bg-white">
+      <section id="precos" className="py-16 bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -198,10 +198,10 @@ export default function PricingSection() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Planos e Preços
             </h2>
-            <p className="text-xl text-gray-600 mb-6">
+            <p className="text-xl text-gray-300 mb-6">
               Investimento que se paga em 7 dias
             </p>
             <div className="bg-gradient-to-r from-whatsapp to-green-600 text-white p-6 rounded-xl max-w-4xl mx-auto">
@@ -252,7 +252,7 @@ export default function PricingSection() {
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                     <div className="mb-4">
                       <span className="text-3xl font-bold text-gray-400 line-through">{plan.originalPrice}</span>
-                      <span className="text-4xl font-bold text-whatsapp ml-2">{plan.currentPrice}</span>
+                      <span className="text-4xl font-bold text-cyan-400 ml-2">{plan.currentPrice}</span>
                       <span className="text-gray-600">{plan.period}</span>
                     </div>
                     
@@ -268,14 +268,14 @@ export default function PricingSection() {
                     <ul className="space-y-3 text-left mb-8 flex-grow">
                       {plan.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center">
-                          <CheckCircle className="text-whatsapp h-5 w-5 mr-3 flex-shrink-0" />
+                          <CheckCircle className="text-emerald-400 h-5 w-5 mr-3 flex-shrink-0" />
                           <span className="text-gray-700">{feature}</span>
                         </li>
                       ))}
                     </ul>
                     
                     <Button 
-                      className={`w-full ${plan.highlighted ? 'bg-whatsapp hover:bg-whatsapp-dark transform hover:scale-105' : 'bg-whatsapp hover:bg-whatsapp-dark'} transition-all`}
+                      className={`w-full ${plan.highlighted ? 'bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 transform hover:scale-105' : 'bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600'} transition-all text-white font-bold`}
                     >
                       Comprar Agora
                     </Button>

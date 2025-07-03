@@ -25,21 +25,21 @@
   --radius: 0.75rem;
   
   /* Enhanced WhatsApp and brand colors */
-  --whatsapp: hsl(142, 76%, 36%);
-  --whatsapp-dark: hsl(142, 76%, 30%);
-  --whatsapp-light: hsl(142, 76%, 45%);
-  --blue-dark: hsl(220, 91%, 25%);
-  --blue-light: hsl(220, 83%, 53%);
-  --blue-gradient-start: hsl(220, 91%, 35%);
-  --blue-gradient-end: hsl(220, 83%, 63%);
-  --yellow-accent: hsl(45, 93%, 47%);
-  --orange-accent: hsl(25, 95%, 53%);
-  --purple-accent: hsl(263, 70%, 50%);
-  --green-success: hsl(145, 63%, 42%);
+  --whatsapp: hsl(158, 100%, 50%);
+  --whatsapp-dark: hsl(158, 100%, 40%);
+  --whatsapp-light: hsl(158, 100%, 60%);
+  --blue-dark: hsl(215, 100%, 15%);
+  --blue-light: hsl(195, 100%, 50%);
+  --blue-gradient-start: hsl(215, 100%, 25%);
+  --blue-gradient-end: hsl(195, 100%, 60%);
+  --yellow-accent: hsl(48, 100%, 50%);
+  --orange-accent: hsl(30, 100%, 50%);
+  --purple-accent: hsl(270, 100%, 50%);
+  --green-success: hsl(158, 100%, 50%);
   --red-danger: hsl(0, 84%, 60%);
-  --gradient-primary: linear-gradient(135deg, hsl(142, 76%, 36%) 0%, hsl(220, 83%, 53%) 100%);
-  --gradient-secondary: linear-gradient(135deg, hsl(220, 91%, 25%) 0%, hsl(142, 76%, 36%) 100%);
-  --gradient-accent: linear-gradient(135deg, hsl(45, 93%, 47%) 0%, hsl(25, 95%, 53%) 100%);
+  --gradient-primary: linear-gradient(135deg, hsl(158, 100%, 50%) 0%, hsl(195, 100%, 50%) 100%);
+  --gradient-secondary: linear-gradient(135deg, hsl(215, 100%, 15%) 0%, hsl(158, 100%, 50%) 100%);
+  --gradient-accent: linear-gradient(135deg, hsl(48, 100%, 50%) 0%, hsl(30, 100%, 50%) 100%);
 }
 
 .dark {
@@ -160,17 +160,47 @@
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 10px rgba(255, 165, 0, 0.6);
+    box-shadow: 0 0 15px rgba(34, 211, 238, 0.6);
     transform: scale(1);
   }
   50% {
-    box-shadow: 0 0 25px rgba(255, 165, 0, 0.9);
+    box-shadow: 0 0 30px rgba(34, 211, 238, 0.9);
     transform: scale(1.02);
   }
 }
 
+@keyframes neon-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.neon-text {
+  text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor;
+  animation: neon-flicker 3s ease-in-out infinite;
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+.gradient-animated {
+  background-size: 200% 200%;
+  animation: gradient-shift 4s ease infinite;
 }
 
 @keyframes fade-in-up {

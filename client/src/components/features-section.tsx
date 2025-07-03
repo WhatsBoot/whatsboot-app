@@ -75,7 +75,7 @@ export default function FeaturesSection() {
   return (
     <>
       {/* What You'll Receive Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-800">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -84,17 +84,17 @@ export default function FeaturesSection() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               ⚡ O QUE VOCÊ VAI RECEBER:
             </h2>
           </motion.div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: TrendingUp, title: "Sistema que fatura R$ 2.1M/dia", color: "whatsapp", bg: "bg-gradient-to-br from-whatsapp to-green-success" },
-              { icon: Bot, title: "Automação 100% inteligente", color: "blue-light", bg: "bg-gradient-to-br from-blue-light to-purple-accent" },
-              { icon: Clock, title: "Acesso liberado em 24 horas", color: "green-success", bg: "bg-gradient-to-br from-green-success to-whatsapp" },
-              { icon: Settings, title: "Suporte exclusivo VIP", color: "purple-accent", bg: "bg-gradient-to-br from-purple-accent to-blue-light" }
+              { icon: TrendingUp, title: "Sistema que fatura R$ 2.1M/dia", color: "whatsapp", bg: "bg-gradient-to-br from-cyan-400 to-green-400" },
+              { icon: Bot, title: "Automação 100% inteligente", color: "blue-light", bg: "bg-gradient-to-br from-blue-500 to-purple-500" },
+              { icon: Clock, title: "Acesso liberado em 24 horas", color: "green-success", bg: "bg-gradient-to-br from-green-400 to-emerald-500" },
+              { icon: Settings, title: "Suporte exclusivo VIP", color: "purple-accent", bg: "bg-gradient-to-br from-purple-500 to-pink-500" }
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -108,8 +108,8 @@ export default function FeaturesSection() {
                     <div className={`${item.bg} h-20 flex items-center justify-center`}>
                       <item.icon className="text-white h-10 w-10" />
                     </div>
-                    <div className="p-6 text-center">
-                      <h3 className="font-bold text-gray-900 text-lg leading-tight">{item.title}</h3>
+                    <div className="p-6 text-center bg-gray-700">
+                      <h3 className="font-bold text-white text-lg leading-tight">{item.title}</h3>
                     </div>
                   </CardContent>
                 </Card>
@@ -120,7 +120,7 @@ export default function FeaturesSection() {
       </section>
 
       {/* Problems Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -129,7 +129,7 @@ export default function FeaturesSection() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               🚫 Pare de sofrer com estes problemas:
             </h2>
           </motion.div>
@@ -149,15 +149,15 @@ export default function FeaturesSection() {
                 viewport={{ once: true }}
                 className="relative overflow-hidden"
               >
-                <Card className="border-l-4 border-l-red-500 hover:shadow-lg transition-all duration-300">
+                <Card className="border-l-4 border-l-red-500 hover:shadow-lg transition-all duration-300 bg-gray-800 border-gray-700">
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
                       <div className="bg-red-500 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
                         <span className="text-white text-xl font-bold">✕</span>
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-bold text-gray-900 text-lg mb-2">{problem.text}</h3>
-                        <p className="text-red-600 font-semibold text-sm">{problem.impact}</p>
+                        <h3 className="font-bold text-white text-lg mb-2">{problem.text}</h3>
+                        <p className="text-red-400 font-semibold text-sm">{problem.impact}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -234,7 +234,7 @@ export default function FeaturesSection() {
       </section>
 
       {/* Complete Features Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-800">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -243,13 +243,13 @@ export default function FeaturesSection() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Funcionalidades Completas
             </h2>
-            <p className="text-xl text-gray-600 mb-2">
+            <p className="text-xl text-gray-300 mb-2">
               Todas as ferramentas que você precisa em um só lugar
             </p>
-            <p className="text-gray-500">
+            <p className="text-gray-400">
               Após a assinatura, você terá acesso completo a todas essas funcionalidades profissionais para maximizar seus resultados no WhatsApp.
             </p>
           </motion.div>
@@ -263,13 +263,13 @@ export default function FeaturesSection() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="hover:shadow-lg transition-shadow h-full">
+                <Card className="hover:shadow-lg transition-shadow h-full bg-gray-700 border-gray-600">
                   <CardContent className="p-6">
                     <div className="flex items-center mb-4">
                       <feature.icon className={`${feature.color} h-6 w-6 mr-3`} />
-                      <h3 className="text-lg font-bold text-gray-900">{feature.title}</h3>
+                      <h3 className="text-lg font-bold text-white">{feature.title}</h3>
                     </div>
-                    <p className="text-gray-600 text-sm">{feature.description}</p>
+                    <p className="text-gray-300 text-sm">{feature.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
