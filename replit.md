@@ -87,10 +87,19 @@ The application follows a monorepo structure with a clear separation between fro
 - PostgreSQL database with connection pooling
 - Environment-based configuration for different deployment targets
 
+## Recent Changes
+
+- July 03, 2025: Added YouTube video integration before "What You'll Receive" section
+- July 03, 2025: Integrated Kiwify payment links for all pricing plans
+- July 03, 2025: Enhanced mobile responsiveness across all components
+- July 03, 2025: Added fourth pricing plan (Premium - Anual)
+- July 03, 2025: Optimized grid layouts for mobile devices
+
 ## Changelog
 
 Changelog:
-- July 03, 2025. Initial setup
+- July 03, 2025. Initial setup with complete WhatsApp landing page replica
+- July 03, 2025. Added video integration and payment system integration
 
 ## User Preferences
 

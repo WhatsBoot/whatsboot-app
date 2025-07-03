@@ -75,7 +75,7 @@ export default function FeaturesSection() {
   return (
     <>
       {/* Video Section */}
-      <section className="py-16 bg-white">
+      <section className="py-12 md:py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -97,9 +97,9 @@ export default function FeaturesSection() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
+            className="max-w-4xl mx-auto px-2"
           >
-            <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl">
+            <div className="relative aspect-video rounded-lg md:rounded-xl overflow-hidden shadow-2xl">
               <iframe
                 src="https://www.youtube.com/embed/85BCebzVSBE"
                 title="WhatsBoot - Demonstração do Sistema"
@@ -127,7 +127,7 @@ export default function FeaturesSection() {
             </h2>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { icon: TrendingUp, title: "Sistema que fatura R$ 2.1M/dia", color: "text-whatsapp" },
               { icon: Bot, title: "Automação 100% inteligente", color: "text-blue-light" },
@@ -170,7 +170,7 @@ export default function FeaturesSection() {
             </h2>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {[
               "Perder clientes por demora na resposta",
               "Trabalho manual repetitivo e cansativo",
