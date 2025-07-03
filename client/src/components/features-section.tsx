@@ -74,44 +74,6 @@ export default function FeaturesSection() {
 
   return (
     <>
-      {/* Video Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              📹 Veja Como Funciona na Prática
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Assista a demonstração completa do sistema em funcionamento
-            </p>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl">
-              <iframe
-                src="https://www.youtube.com/embed/85BCebzVSBE"
-                title="WhatsBoot - Demonstração do Sistema"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* What You'll Receive Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
