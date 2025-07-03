@@ -217,7 +217,7 @@ export default function ContactForm() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* WhatsApp Contact */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}

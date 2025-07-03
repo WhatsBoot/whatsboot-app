@@ -20,8 +20,7 @@ export default function PricingSection() {
         "Relatórios básicos"
       ],
       badge: null,
-      highlighted: false,
-      paymentLink: "https://pay.kiwify.com.br/gHCABTA"
+      highlighted: false
     },
     {
       name: "Profissional - Trimestral",
@@ -38,8 +37,7 @@ export default function PricingSection() {
       ],
       badge: "🔥 MAIS VENDIDO",
       badgeText: "Melhor Oferta",
-      highlighted: true,
-      paymentLink: "https://pay.kiwify.com.br/tO19FzK"
+      highlighted: true
     },
     {
       name: "Enterprise - Semestral",
@@ -56,27 +54,7 @@ export default function PricingSection() {
       ],
       badge: null,
       badgeText: "Máximo Valor",
-      highlighted: false,
-      paymentLink: "https://pay.kiwify.com.br/IZXVyQ0"
-    },
-    {
-      name: "Premium - Anual",
-      originalPrice: "R$ 240",
-      currentPrice: "R$ 180",
-      period: "/ano",
-      description: "Economia de 25%",
-      features: [
-        "Contatos ilimitados",
-        "Campanhas ilimitadas",
-        "Suporte 24/7 premium",
-        "Chatbot avançado",
-        "Integrações customizadas",
-        "Treinamento personalizado"
-      ],
-      badge: null,
-      badgeText: "Melhor Custo-Benefício",
-      highlighted: false,
-      paymentLink: "https://pay.kiwify.com.br/iBI7ASl"
+      highlighted: false
     }
   ];
 
@@ -245,7 +223,7 @@ export default function PricingSection() {
             </div>
           </motion.div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-3 gap-8">
             {plans.map((plan, index) => (
               <motion.div
                 key={index}
@@ -297,12 +275,9 @@ export default function PricingSection() {
                     </ul>
                     
                     <Button 
-                      asChild
                       className={`w-full ${plan.highlighted ? 'bg-whatsapp hover:bg-whatsapp-dark transform hover:scale-105' : 'bg-whatsapp hover:bg-whatsapp-dark'} transition-all`}
                     >
-                      <a href={plan.paymentLink} target="_blank" rel="noopener noreferrer">
-                        Comprar Agora
-                      </a>
+                      Comprar Agora
                     </Button>
                     
                     {plan.badgeText && (

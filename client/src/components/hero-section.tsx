@@ -60,7 +60,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-3xl md:text-4xl lg:text-6xl font-black text-white mb-6 leading-tight"
+          className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight"
         >
           A Máquina de Vendas no WhatsApp<br />
           <span className="text-yellow-accent">Que Você Estava Esperando!</span>
@@ -71,7 +71,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-lg md:text-xl lg:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed"
+          className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed"
         >
           O sistema secreto que grandes empresas usam para dominar vendas no WhatsApp. 
           <strong className="text-yellow-accent"> Converta 387% mais leads</strong> e elimine 94% do trabalho manual.
@@ -82,7 +82,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-4xl mx-auto"
+          className="grid md:grid-cols-4 gap-4 mb-8 max-w-4xl mx-auto"
         >
           {stats.map((stat, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm p-4 rounded-lg text-white">
