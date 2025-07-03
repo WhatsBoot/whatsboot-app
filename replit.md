@@ -91,6 +91,10 @@ The application follows a monorepo structure with a clear separation between fro
 
 Changelog:
 - July 03, 2025. Initial setup
+- January 03, 2025. Implemented active payment links in pricing section with Kiwify integration
+- January 03, 2025. Added comprehensive database schema for admin dashboard and member management
+- January 03, 2025. Created detailed installation guide for cPanel deployment
+- January 03, 2025. Enhanced features section with detailed demonstration and improved UX
 
 ## User Preferences
 

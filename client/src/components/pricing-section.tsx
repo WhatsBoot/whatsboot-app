@@ -13,11 +13,13 @@ export default function PricingSection() {
       currentPrice: "R$ 25",
       period: "/mês",
       description: "Ideal para começar",
+      paymentLink: "https://pay.kiwify.com.br/gHCABTA",
       features: [
         "Até 1.000 contatos",
         "5 campanhas por mês",
         "Suporte por email",
-        "Relatórios básicos"
+        "Relatórios básicos",
+        "Dashboard completo"
       ],
       badge: null,
       highlighted: false
@@ -28,31 +30,55 @@ export default function PricingSection() {
       currentPrice: "R$ 60",
       period: "/3 meses",
       description: "Economia de 33%",
+      paymentLink: "https://pay.kiwify.com.br/tO19FzK",
       features: [
         "Até 5.000 contatos",
         "Campanhas ilimitadas",
         "Suporte prioritário",
         "Relatórios avançados",
-        "Chatbot básico"
+        "Chatbot básico",
+        "Vídeo aulas exclusivas"
       ],
       badge: "🔥 MAIS VENDIDO",
       badgeText: "Melhor Oferta",
       highlighted: true
     },
     {
-      name: "Enterprise - Semestral",
+      name: "Premium - Semestral",
       originalPrice: "R$ 180",
       currentPrice: "R$ 100",
       period: "/6 meses",
       description: "Economia de 44%",
+      paymentLink: "https://pay.kiwify.com.br/IZXVyQ0",
       features: [
-        "Contatos ilimitados",
+        "Até 15.000 contatos",
         "Campanhas ilimitadas",
         "Suporte 24/7",
         "Chatbot avançado",
-        "Integrações customizadas"
+        "Integrações premium",
+        "Arquivos para download"
       ],
       badge: null,
+      badgeText: "Mais Popular",
+      highlighted: false
+    },
+    {
+      name: "Enterprise - Anual",
+      originalPrice: "R$ 360",
+      currentPrice: "R$ 180",
+      period: "/ano",
+      description: "Economia de 50%",
+      paymentLink: "https://pay.kiwify.com.br/iBI7ASl",
+      features: [
+        "Contatos ilimitados",
+        "Campanhas ilimitadas",
+        "Suporte VIP 24/7",
+        "Chatbot IA avançado",
+        "Integrações customizadas",
+        "API completa",
+        "Treinamento personalizado"
+      ],
+      badge: "👑 VIP",
       badgeText: "Máximo Valor",
       highlighted: false
     }
@@ -223,7 +249,7 @@ export default function PricingSection() {
             </div>
           </motion.div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {plans.map((plan, index) => (
               <motion.div
                 key={index}
@@ -275,9 +301,10 @@ export default function PricingSection() {
                     </ul>
                     
                     <Button 
-                      className={`w-full ${plan.highlighted ? 'bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 transform hover:scale-105' : 'bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600'} transition-all text-white font-bold`}
+                      onClick={() => window.open(plan.paymentLink, '_blank')}
+                      className={`w-full ${plan.highlighted ? 'bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 transform hover:scale-105 pulse-glow' : 'bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600'} transition-all text-white font-bold py-4 text-lg shadow-lg`}
                     >
-                      Comprar Agora
+                      🛒 Comprar Agora
                     </Button>
                     
                     {plan.badgeText && (
