@@ -27,11 +27,11 @@ Antes de instalar, certifique-se de que sua hospedagem possui:
    
    // Configurações do administrador:
    ADMIN_USERNAME: 'WhatsBoot',
-   ADMIN_PASSWORD: '15353621',
-   ADMIN_EMAIL: 'seu@email.com',
+   ADMIN_PASSWORD: 'teste123',
+   ADMIN_EMAIL: 'whatsboot@gmail.com',
    
    // URL do seu site:
-   SITE_URL: 'https://seudominio.com',
+   SITE_URL: 'https://whatsboot.shop',
    ```
 
 ### 2️⃣ CONFIGURAÇÃO DO BANCO NO CPANEL
@@ -220,9 +220,9 @@ npm run clean
 ```
 
 ### Informações de Contato
-- 📧 Email: suporte@whatsboot.com
-- 💬 WhatsApp: +55 11 99999-9999
-- 🌐 Site: https://whatsboot.com
+- 📧 Email: whatsboott@gmail.com
+- 💬 WhatsApp: +55 74 98108-4870
+- 🌐 Site: https://whatsboot.shop
 
 ---
 
